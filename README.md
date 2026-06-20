@@ -1,81 +1,54 @@
-# 📝 AI CrewAI Blog Writing Crew
+# BlogWritingCrew Crew
 
-An AI-powered collaborative system for automated blog writing, built using [CrewAI](https://www.crewai.com/) and designed to streamline the process of generating structured, high-quality blog content with multiple specialized agents.
+Welcome to the BlogWritingCrew Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
-<img width="1337" height="692" alt="output 1" src="https://github.com/user-attachments/assets/f6c360ab-63b4-431a-9d22-140659434c03" />
+## Installation
 
-<img width="1341" height="846" alt="output 2" src="https://github.com/user-attachments/assets/ed8111eb-9a37-4680-a516-19ca3cd79437" />
+Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
 
-<img width="1296" height="736" alt="output 7" src="https://github.com/user-attachments/assets/1864eb3f-298a-4342-8b06-bf596eca2a97" />
-
----
-
-## 🚀 Project Overview
-This project leverages CrewAI to orchestrate a team of AI agents that work together to:
-- Research topics
-- Generate outlines
-- Write blog drafts
-- Edit and refine content
-- Produce final polished articles
-
-The workflow ensures that each agent contributes its expertise, resulting in coherent and engaging blog posts.
-
----
-
-## 📂 Features
-- **Multi-Agent Collaboration**: Specialized agents for research, drafting, editing, and publishing.
-- **Automated Blog Workflow**: End-to-end pipeline from idea generation to final article.
-- **Customizable Roles**: Define agent responsibilities based on project needs.
-- **Scalable Content Creation**: Easily extendable to multiple topics or domains.
-
----
-
-## 🛠️ Tech Stack
-- **Python** (core implementation)
-- **CrewAI Framework**
-- **LangChain / LLM Integrations**
-- **OpenAI API** (or other LLM providers)
-- **Markdown / HTML Export** for blog-ready content
-
----
-
-## ⚙️ Installation
-Clone the repository and install dependencies:
+First, if you haven't already, install uv:
 
 ```bash
-git clone https://github.com/your-username/ai-crewai-blog-writing-crew.git
-cd ai-crewai-blog-writing-crew
-pip install -r requirements.txt
+pip install uv
 ```
 
-## ▶️ Usage
-Run the main script to start the blog writing crew:
+Next, navigate to your project directory and install the dependencies:
+
+(Optional) Lock the dependencies and install them by using the CLI command:
+```bash
+crewai install
+```
+### Customizing
+
+**Add your `OPENAI_API_KEY` into the `.env` file**
+
+- Modify `src/blog_writing_crew/config/agents.yaml` to define your agents
+- Modify `src/blog_writing_crew/config/tasks.yaml` to define your tasks
+- Modify `src/blog_writing_crew/crew.py` to add your own logic, tools and specific args
+- Modify `src/blog_writing_crew/main.py` to add custom inputs for your agents and tasks
+
+## Running the Project
+
+To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
 
 ```bash
-python main.py
-```
-You can configure agents and topics in the config/ folder.
-
-## 📊 Workflow Diagram
-```
-flowchart TD
-    A[Topic Input] --> B[Research Agent]
-    B --> C[Outline Agent]
-    C --> D[Draft Writing Agent]
-    D --> E[Editing Agent]
-    E --> F[Final Blog Output]
+$ crewai run
 ```
 
-## 📑 Example Output
-- **Input:** "AI in Education"
-- **Output:** A structured blog post with introduction, body sections, and conclusion, ready for publishing.
+This command initializes the blog-writing-crew Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
-## 🤝 Contributing
-Contributions are welcome! Please fork the repo and submit a pull request.
+This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
 
-## 📜 License
-This project is licensed under the MIT License.
+## Understanding Your Crew
 
-## 🌐 Links
-- https://learn.nextwork.org/projects/ai-crewai-blog-writing-crew?track=high&utm_source=copilot.com
-- https://www.crewai.com/?utm_source=copilot.com
+The blog-writing-crew Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+
+## Support
+
+For support, questions, or feedback regarding the BlogWritingCrew Crew or crewAI.
+- Visit our [documentation](https://docs.crewai.com)
+- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
+- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
+- [Chat with our docs](https://chatg.pt/DWjSBZn)
+
+Let's create wonders together with the power and simplicity of crewAI.
