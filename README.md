@@ -1,10 +1,20 @@
-# BlogWritingCrew Crew
+# BlogWritingCrew 🚀
 
-Welcome to the BlogWritingCrew Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to BlogWritingCrew, a collaborative AI project built with crewAI. This framework enables you to orchestrate multiple AI agents working together on complex tasks—like blog writing, research, and content generation—maximizing efficiency and creativity.
 
-## Installation
+<img width="1337" height="692" alt="output 1" src="https://github.com/user-attachments/assets/a4370583-eba0-4fc4-8968-15b18ee1acf1" />
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+<img width="1341" height="846" alt="output 2" src="https://github.com/user-attachments/assets/97017446-4596-497d-b817-537e350ad77b" />
+
+<img width="1296" height="736" alt="output 7" src="https://github.com/user-attachments/assets/05da1502-fcc0-4636-a3bb-cb68f5081598" />
+
+<img width="1276" height="545" alt="output 8" src="https://github.com/user-attachments/assets/686bbe76-72a6-4bd4-bb1a-0b4121c5c889" />
+
+
+## 📦 Installation
+
+Before starting, ensure you have Python >=3.10 and <3.14 installed.
+This project uses UV for dependency management.
 
 First, if you haven't already, install uv:
 
@@ -18,37 +28,39 @@ Next, navigate to your project directory and install the dependencies:
 ```bash
 crewai install
 ```
-### Customizing
+### ⚙️ Configuration
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+To customize your crew:
 
-- Modify `src/blog_writing_crew/config/agents.yaml` to define your agents
-- Modify `src/blog_writing_crew/config/tasks.yaml` to define your tasks
-- Modify `src/blog_writing_crew/crew.py` to add your own logic, tools and specific args
-- Modify `src/blog_writing_crew/main.py` to add custom inputs for your agents and tasks
+- Add your GEMINI_API_KEY in the .env file.
+- Define agents in src/blog_writing_crew/config/agents.yaml.
+- Define tasks in src/blog_writing_crew/config/tasks.yaml.
+- Add logic, tools, and arguments in src/blog_writing_crew/crew.py.
+- Provide custom inputs in src/blog_writing_crew/main.py.
 
-## Running the Project
+This modular setup ensures flexibility—you can tailor agents and tasks to fit your workflow.
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+## ▶️ Running the Project
+To launch your crew of AI agents:
 
-```bash
-$ crewai run
+```
+crewai run
 ```
 
-This command initializes the blog-writing-crew Crew, assembling the agents and assigning them tasks as defined in your configuration.
+This command initializes the BlogWritingCrew, assembles agents, and executes tasks as defined in your configuration.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+By default, the example run generates a report.md file in the root directory containing research on LLMs (Large Language Models).
 
-## Understanding Your Crew
+## 👥 Understanding Your Crew
+The BlogWritingCrew is composed of multiple AI agents, each with unique roles, goals, and tools.
 
-The blog-writing-crew Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+- Agents are defined in config/agents.yaml.
+- Tasks are defined in config/tasks.yaml.
+- Agents collaborate to complete tasks, leveraging their collective intelligence to produce high-quality outputs.
 
-## Support
+This design allows you to scale from simple blog posts to complex multi-step workflows.
 
-For support, questions, or feedback regarding the BlogWritingCrew Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
+## 📚 Support & Resources
+Need help or want to explore more?
+- https://docs.crewai.com/?utm_source=copilot.com
+- https://learn.nextwork.org/projects/ai-crewai-blog-writing-crew?track=high
